@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - Toko Buku UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Toko Buku UT</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="stok.html">Stok/Katalog</a></li>
+                <li><a href="checkout.html">Pemesanan</a></li>
+                <li><a href="tracking.html" class="active">Tracking</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Lacak Pengiriman (Delivery Order)</h2>
+            <form id="trackingForm" style="display: flex; gap: 10px; margin-top: 15px;">
+                <input type="text" id="nomorDO" class="form-control" placeholder="Masukkan Nomor Delivery Order (contoh: 20230012)" required>
+                <button type="submit" class="btn">Cari</button>
+            </form>
+        </div>
+
+        <div id="trackingResult"></div>
+    </div>
+
+    <footer>
+        &copy; 2026 Toko Buku Online . Pemrograman Web 1.
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

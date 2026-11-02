@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Pemesanan - Toko Buku UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Toko Buku UT</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="stok.html">Stok/Katalog</a></li>
+                <li><a href="checkout.html" class="active">Pemesanan</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Form Checkout & Pemesanan</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            <!-- Cart Table -->
+            <div class="card" style="flex: 2; min-width: 300px;">
+                <h3>Item Pemesanan</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Buku</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkoutTableBody">
+                    </tbody>
+                </table>
+                <div style="text-align: right; margin-top: 20px; font-size: 1.2rem; font-weight: bold;">
+                    Total: <span id="totalBelanja">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Customer & Payment Info Form -->
+            <div class="card" style="flex: 1; min-width: 300px;">
+                <h3>Informasi Pemesan</h3>
+                <form id="checkoutForm" style="margin-top: 15px;">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" class="form-control" required value="Rina Wulandari">
+                    </div>
+                    <div class="form-group">
+                        <label>Alamat Pengiriman</label>
+                        <textarea class="form-control" rows="3" required>Jl. Pemuda No. 12, Jakarta Selatan</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Metode Pembayaran</label>
+                        <select class="form-control" required>
+                            <option>Transfer Bank (BCA)</option>
+                            <option>Transfer Bank (Mandiri)</option>
+                            <option>Virtual Account</option>
+                            <option>E-Wallet (Gopay/OVO)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ekspedisi</label>
+                        <select class="form-control" required>
+                            <option>JNE Regular</option>
+                            <option>Pos Indonesia</option>
+                            <option>J&T Express</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success" style="width: 100%; font-size: 1.1rem;">Buat Pesanan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Toko Buku Online . Pemrograman Web 1.
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

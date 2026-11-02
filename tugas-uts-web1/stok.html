@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Stok - Toko Buku UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Toko Buku UT</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="stok.html" class="active">Stok/Katalog</a></li>
+                <li><a href="checkout.html">Pemesanan</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Katalog & Informasi Stok Buku</h2>
+            <button class="btn btn-success" onclick="openModal('addModal')">+ Tambah Stok Buku</button>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Cover</th>
+                        <th>Nama Buku</th>
+                        <th>Jenis</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody id="catalogTableBody">
+                    <!-- Dynamic rendering by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Stok -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('addModal')">&times;</span>
+            <h3>Tambah Buku Baru</h3>
+            <form id="addStokForm" style="margin-top: 15px;">
+                <div class="form-group">
+                    <label>Kode Barang</label>
+                    <input type="text" id="kodeBarang" class="form-control" required placeholder="Contoh: MKWI4201">
+                </div>
+                <div class="form-group">
+                    <label>Nama Buku</label>
+                    <input type="text" id="namaBarang" class="form-control" required placeholder="Judul Buku">
+                </div>
+                <div class="form-group">
+                    <label>Jenis Barang</label>
+                    <input type="text" id="jenisBarang" class="form-control" value="Buku Ajar" required>
+                </div>
+                <div class="form-group">
+                    <label>Edisi</label>
+                    <input type="number" id="edisi" class="form-control" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Stok</label>
+                    <input type="number" id="stok" class="form-control" required placeholder="100">
+                </div>
+                <div class="form-group">
+                    <label>Harga (Rp)</label>
+                    <input type="number" id="harga" class="form-control" required placeholder="150000">
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Simpan Stok Baru</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Toko Buku Online . Pemrograman Web 1.
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
