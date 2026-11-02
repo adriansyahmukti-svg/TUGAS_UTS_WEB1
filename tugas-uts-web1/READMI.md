@@ -50,3 +50,24 @@ Visualisasi alur/status pengiriman paket (proses, dikirim, terkirim).
 └── js/
     ├── data.js         # Dummy data stok dan data tracking DO
     └── script.js       # Logika antarmuka, event handler, dan manipulasi DOM
+'''
+
+
+![img](img/1.png)
+
+![img](img/2.png)
+
+![img](img/3.png)
+
+![img](img/4.png)
+
+![img](img/5.png)
+
+![img](img/6.png)
+
+![img](img/7.png)
+
+
+
+    
+
